@@ -1,0 +1,488 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Sitladihi Bridge</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600&family=DM+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: sky-blue page that opens on one big photo brought to life (water, palms, sky move),
+   a deep-blue distance band with a fiery number, a scroll-driven photo sequence, then facts about the site. */
+:root {
+  --bg: #eaf5ff;
+  --bg-2: #d7ebfb;
+  --sky-top: #8fd0ff;
+  --surface: #ffffff;
+  --ink: #0a2540;
+  --ink-dim: #46607c;
+  --line: rgba(10, 37, 64, .14);
+  --sky: #1d8fe8;
+  --fire-text: #b93a0b;
+  --fire-grad: linear-gradient(100deg, #ffb020 0%, #ff5a1f 55%, #e11d2e 100%);
+  --glow: rgba(255, 128, 32, .42);
+  --deep: #0a2a56;
+  --deep-2: #06173a;
+  --deep-ink: #eaf4ff;
+  --deep-dim: #a9c4e2;
+  --f-display: "Bricolage Grotesque", "Instrument Sans", system-ui, sans-serif;
+  --f-body: "Instrument Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --f-mono: "DM Mono", ui-monospace, "SFMono-Regular", monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #06152b; --bg-2: #0a2040; --sky-top: #0d3d7a; --surface: #0f2a52;
+    --ink: #eaf4ff; --ink-dim: #9db8d6; --line: rgba(234, 244, 255, .16);
+    --sky: #5cb8ff; --fire-text: #ff9a5c; --glow: rgba(255, 110, 20, .32);
+    --deep: #04112a; --deep-2: #020a1b;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #06152b; --bg-2: #0a2040; --sky-top: #0d3d7a; --surface: #0f2a52;
+  --ink: #eaf4ff; --ink-dim: #9db8d6; --line: rgba(234, 244, 255, .16);
+  --sky: #5cb8ff; --fire-text: #ff9a5c; --glow: rgba(255, 110, 20, .32);
+  --deep: #04112a; --deep-2: #020a1b;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--f-body); font-size: 17px; line-height: 1.65; }
+.in { max-width: 1160px; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+a { color: var(--fire-text); }
+:focus-visible { outline: 2px solid #ff5a1f; outline-offset: 3px; }
+.eyebrow { font-family: var(--f-mono); font-size: 12px; letter-spacing: .16em; text-transform: uppercase; color: var(--fire-text); margin: 0; }
+h1, h2, h3 { font-family: var(--f-display); text-wrap: balance; margin: 0; }
+h2 { font-weight: 800; font-size: clamp(30px, 4.6vw, 52px); line-height: 1.06; letter-spacing: -.02em; }
+.fire { background: var(--fire-grad); -webkit-background-clip: text; background-clip: text; color: transparent; -webkit-text-fill-color: transparent; }
+
+/* hero */
+.hero { background: radial-gradient(640px 420px at 88% 0%, var(--glow), transparent 70%), linear-gradient(180deg, var(--sky-top) 0%, var(--bg) 760px); padding-block: 36px 56px; }
+.hero .in { display: grid; gap: 16px; }
+h1 { font-weight: 800; font-size: clamp(52px, 9.5vw, 112px); line-height: .94; letter-spacing: -.035em; }
+.lede { font-size: clamp(18px, 2.2vw, 22px); max-width: 60ch; margin: 4px 0 0; color: var(--ink); }
+.actions { display: flex; flex-wrap: wrap; gap: 12px; margin: 6px 0 14px; }
+.btn { font: 600 15px/1 var(--f-body); border-radius: 99px; padding: 15px 24px; text-decoration: none; cursor: pointer; border: 1px solid var(--line); background: transparent; color: var(--ink); display: inline-flex; align-items: center; gap: 8px; transition: transform .2s; }
+.btn:hover { transform: translateY(-2px); }
+.btn.pri { background: var(--fire-grad); color: #1a0a00; border-color: transparent; }
+.hero-media { position: relative; aspect-ratio: 1408 / 679; max-width: 100%; border-radius: 26px; overflow: hidden; background: #6e8f6a; box-shadow: 0 40px 90px -36px rgba(6, 30, 70, .7), 0 0 0 1px var(--line); }
+.hero-media img, .hero-media canvas { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; }
+.hero-media canvas { opacity: 0; transition: opacity 1.2s ease; }
+.hero-media canvas.on { opacity: 1; }
+.tag { position: absolute; left: 14px; bottom: 12px; font-family: var(--f-mono); font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: #fff; background: rgba(6, 22, 50, .55); backdrop-filter: blur(6px); padding: 5px 11px; border-radius: 99px; }
+.bird { position: absolute; left: -8%; width: 30px; height: 14px; animation: fly linear infinite; pointer-events: none; }
+.bird path { fill: none; stroke: #1b2b2a; stroke-width: 1.8; stroke-linecap: round; transform-box: fill-box; transform-origin: center; animation: flap .5s ease-in-out infinite alternate; }
+@keyframes fly { from { left: -8%; } to { left: 108%; } }
+@keyframes flap { from { transform: scaleY(1); } to { transform: scaleY(.3); } }
+
+/* facts */
+.facts-band { padding-block: 64px; }
+.facts { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 28px 26px; margin: 28px 0 0; }
+.fact { border-top: 2px solid var(--line); padding-top: 14px; min-width: 0; position: relative; }
+.fact::before { content: ""; position: absolute; left: 0; top: -2px; width: 44px; height: 2px; background: var(--fire-grad); }
+.fact dt { font-family: var(--f-mono); font-size: 11.5px; letter-spacing: .14em; text-transform: uppercase; color: var(--ink-dim); }
+.fact dd { margin: 6px 0 0; font-family: var(--f-display); font-size: 22px; font-weight: 700; line-height: 1.3; overflow-wrap: anywhere; }
+.fact dd small { display: block; font-family: var(--f-body); font-size: 15px; font-weight: 400; color: var(--ink-dim); margin-top: 3px; line-height: 1.5; }
+
+/* distance band */
+.dist-band { background: radial-gradient(520px 340px at 0% 100%, rgba(255, 90, 30, .22), transparent 70%), linear-gradient(180deg, var(--deep), var(--deep-2)); color: var(--deep-ink); padding-block: 72px; }
+.dist { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr); gap: 48px; align-items: center; }
+.dist .eyebrow { color: #ffb36b; }
+.big { font-family: var(--f-display); font-weight: 800; font-size: clamp(92px, 17vw, 190px); line-height: .9; letter-spacing: -.05em; margin: 14px 0 0; font-variant-numeric: tabular-nums; display: flex; align-items: baseline; gap: .1em; }
+.big small { font-size: .26em; letter-spacing: -.01em; font-weight: 700; color: var(--deep-ink); }
+.dist p { max-width: 44ch; }
+.dist .sub { font-size: 19px; margin: 12px 0 0; }
+.note { margin: 22px 0 0; padding: 16px 18px; border-left: 3px solid #ff7a2a; background: rgba(255, 255, 255, .07); border-radius: 0 12px 12px 0; font-size: 15.5px; color: var(--deep-ink); }
+.dist .btn { color: var(--deep-ink); border-color: rgba(234, 244, 255, .28); }
+.dist .btn.pri { color: #1a0a00; border-color: transparent; }
+.dist .actions { margin-top: 24px; }
+.mapbox { background: rgba(255, 255, 255, .05); border: 1px solid rgba(234, 244, 255, .16); border-radius: 22px; padding: 14px; min-width: 0; }
+.mapbox svg { width: 100%; height: auto; display: block; }
+.mapbox .t { font-family: var(--f-display); font-weight: 700; fill: #eaf4ff; }
+.mapbox .m { font-family: var(--f-mono); fill: #a9c4e2; }
+.dash { animation: dash 1.4s linear infinite; }
+@keyframes dash { to { stroke-dashoffset: -22; } }
+.pulse { transform-box: fill-box; transform-origin: center; animation: pulse 2.4s ease-out infinite; }
+@keyframes pulse { 0% { transform: scale(.4); opacity: .9; } 100% { transform: scale(2.8); opacity: 0; } }
+
+/* scroll-grow photos */
+.photos { padding-top: 72px; }
+.photos .head { display: grid; gap: 10px; padding-bottom: 8px; }
+.photos .head p:last-child { margin: 0; color: var(--ink-dim); max-width: 52ch; }
+.shot { position: relative; height: 190vh; --e: 1; --c: 1; --w: 1120px; }
+.stage { position: sticky; top: env(safe-area-inset-top, 0px); height: 100vh; height: 100svh; display: grid; align-content: center; justify-items: center; gap: 16px; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); overflow: hidden; }
+.frame { margin: 0; position: relative; width: min(var(--w), 100%, calc(76vh * 2)); aspect-ratio: 2 / 1; overflow: hidden; background: var(--bg-2);
+  transform: scale(calc(.36 + .64 * var(--e))); border-radius: calc(44px - 22px * var(--e)); box-shadow: 0 30px 80px -30px rgba(6, 30, 70, .65), 0 0 0 1px var(--line); will-change: transform; }
+.frame img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.frame figcaption { position: absolute; inset: auto 0 0 0; padding: 70px 24px 20px; color: #fff; background: linear-gradient(transparent, rgba(4, 14, 34, .82)); opacity: var(--c); font-size: 16px; line-height: 1.5; }
+.count { font-family: var(--f-mono); font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: var(--ink-dim); opacity: var(--c); }
+.count b { color: var(--fire-text); font-weight: 500; }
+
+/* around */
+.around { background: var(--bg-2); padding-block: 72px; }
+.items { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 18px; margin-top: 30px; }
+.item { padding: 24px; border-radius: 18px; background: var(--surface); box-shadow: 0 0 0 1px var(--line); min-width: 0; }
+.item svg { width: 46px; height: 46px; margin-bottom: 14px; display: block; color: var(--fire-text); }
+.item h3 { font-size: 21px; font-weight: 700; line-height: 1.25; margin-bottom: 6px; }
+.item p { margin: 0; font-size: 16px; color: var(--ink-dim); }
+
+footer { padding-block: 48px 64px; }
+footer .in { display: grid; gap: 14px; }
+.coord { font-family: var(--f-mono); font-size: 15px; display: flex; flex-wrap: wrap; align-items: center; gap: 12px; }
+.coord code { background: var(--bg-2); padding: 9px 13px; border-radius: 8px; overflow-wrap: anywhere; }
+footer small { color: var(--ink-dim); font-size: 14px; max-width: 70ch; }
+
+@media (max-width: 760px) {
+  body { font-size: 16.5px; }
+  .hero { padding-block: 36px 44px; }
+  .hero-media { aspect-ratio: 4 / 3; border-radius: 20px; }
+  .dist { grid-template-columns: minmax(0, 1fr); gap: 30px; }
+  .dist-band, .around, .facts-band { padding-block: 52px; }
+  .frame { aspect-ratio: 4 / 3; width: min(var(--w), 100%, calc(70vh * 1.333)); }
+  .frame figcaption { padding: 50px 16px 14px; font-size: 14.5px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .bird, .bird path, .dash, .pulse { animation: none !important; }
+  .bird { display: none; }
+  .shot { height: auto; }
+  .stage { position: static; height: auto; padding-block: 18px; }
+  .frame { transform: none; border-radius: 22px; }
+  .btn { transition: none; }
+}
+</style>
+
+<header class="hero">
+  <div class="in">
+    <p class="eyebrow">Bankura, West Bengal, India</p>
+    <h1>Sitladihi <span class="fire">Bridge</span></h1>
+    <p class="lede">A narrow concrete bridge between palm groves and open paddy fields, a few kilometres north of Bankura town. Water from the upper side runs across the bridge and spills down to the lower side.</p>
+    <div class="hero-media" id="heroMedia">
+      <img src="road-clean.jpg" width="1408" height="679" alt="Sitladihi Bridge seen from the road: a narrow concrete bridge with water on both sides, fan palms on the left and paddy fields on the right">
+      <canvas id="gl" aria-hidden="true"></canvas>
+      <svg class="bird" style="top:11%;animation-duration:34s;animation-delay:-6s" viewBox="0 0 30 14" aria-hidden="true"><path d="M2 8 Q8 0 15 7 Q22 0 28 8"/></svg>
+      <svg class="bird" style="top:17%;animation-duration:38s;animation-delay:-9s;width:24px" viewBox="0 0 30 14" aria-hidden="true"><path d="M2 8 Q8 0 15 7 Q22 0 28 8"/></svg>
+      <svg class="bird" style="top:8%;animation-duration:44s;animation-delay:-21s;width:20px" viewBox="0 0 30 14" aria-hidden="true"><path d="M2 8 Q8 0 15 7 Q22 0 28 8"/></svg>
+      <span class="tag">Real photo, live water, wind and sky</span>
+    </div>
+    <div class="actions">
+      <a class="btn pri" href="#distance">Distance from Bankura</a>
+      <a class="btn" href="#photos">See the photos</a>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="facts-band">
+    <div class="in">
+      <p class="eyebrow">At a glance</p>
+      <h2>Where the bridge is</h2>
+      <dl class="facts">
+        <div class="fact"><dt>District</dt><dd>Bankura</dd></div>
+        <div class="fact"><dt>State</dt><dd>West Bengal<small>India</small></dd></div>
+        <div class="fact"><dt>Locality</dt><dd>Sitladihi</dd></div>
+        <div class="fact"><dt>Coordinates</dt><dd>23.2643° N<small>87.0666° E</small></dd></div>
+        <div class="fact"><dt>Water</dt><dd>Flows across<small>From the upper side over the bridge, then down below</small></dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <section class="dist-band" id="distance">
+    <div class="in dist">
+      <div>
+        <p class="eyebrow">Distance from Bankura</p>
+        <h2>How far from Bankura?</h2>
+        <p class="big" aria-live="polite"><span id="km">3.6</span><small>km</small></p>
+        <p class="sub">In a straight line from the centre of Bankura town. The bridge lies to the north of the town.</p>
+        <p class="note"><b>By road</b> the distance will be a little longer than this. Use the button below for the exact route and travel time in Google Maps.</p>
+        <div class="actions">
+          <a class="btn pri" href="https://www.google.com/maps/dir/?api=1&origin=Bankura%2C+West+Bengal&destination=23.2642922%2C87.0666138" target="_blank" rel="noopener">Directions from Bankura</a>
+          <a class="btn" href="https://www.google.com/maps/place/Sitladihi+Bridge/@23.2646331,87.0669083,178m/data=!3m1!1e3!4m6!3m5!1s0x39f7a7ccaf4d765b:0x92b2f44c9af9373a!8m2!3d23.2642922!4d87.0666138!16s%2Fg%2F11gkxc6r44?authuser=0&entry=ttu&g_ep=EgoyMDI2MTAyOC4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener">Open in Google Maps</a>
+        </div>
+      </div>
+      <div class="mapbox">
+        <svg viewBox="0 0 400 440" role="img" aria-label="Sketch map: Sitladihi Bridge is about 3.6 km north of the centre of Bankura town">
+          <defs><pattern id="grid" width="39.5" height="39.5" patternUnits="userSpaceOnUse"><path d="M39.5 0H0V39.5" fill="none" stroke="#eaf4ff" stroke-opacity=".08"/></pattern></defs>
+          <rect width="400" height="440" rx="12" fill="url(#grid)"/>
+          <g transform="translate(350 64)" text-anchor="middle"><path d="M0 -26 L7 -6 L0 -11 L-7 -6Z" fill="#eaf4ff"/><text class="m" y="16" font-size="13">N</text></g>
+          <line class="dash" x1="230" y1="360" x2="191" y2="82" stroke="#ff8a2a" stroke-width="2.5" stroke-dasharray="7 4"/>
+          <circle cx="230" cy="360" r="8" fill="#5cb8ff"/>
+          <text class="t" x="244" y="366" font-size="18">Bankura town</text>
+          <circle class="pulse" cx="191" cy="82" r="10" fill="#ff5a1f"/>
+          <circle cx="191" cy="82" r="8" fill="#ff5a1f"/>
+          <text class="t" x="208" y="76" font-size="18">Sitladihi Bridge</text>
+          <text class="m" x="208" y="97" font-size="12">3.6 km straight line</text>
+          <g transform="translate(24 404)" stroke="#eaf4ff" stroke-width="2"><path d="M0 0H79"/><path d="M0 -5V5"/><path d="M79 -5V5"/></g>
+          <text class="m" x="24" y="392" font-size="12">1 km</text>
+        </svg>
+      </div>
+    </div>
+    <div class="in"><p style="font-size:14px;color:var(--deep-dim);margin:18px 0 0;max-width:70ch">The centre of Bankura is taken as roughly 23.232° N, 87.072° E. This is a straight-line estimate, so the road distance will differ.</p></div>
+  </section>
+
+  <section class="photos" id="photos">
+    <div class="in head">
+      <p class="eyebrow">Photos</p>
+      <h2>Scroll to open each photo</h2>
+      <p>Each picture starts small and grows to full size as you scroll. Then the next one follows.</p>
+    </div>
+
+    <div class="shot" data-shot>
+      <div class="stage">
+        <figure class="frame">
+          <img src="view-clean.jpg" width="1404" height="685" alt="The bridge deck with a bicycle parked at the left post, a puddle on the concrete, and palms and paddy fields beyond" loading="lazy">
+          <figcaption>The narrow bridge deck with a bicycle parked at the left post. A pond sits to the right.</figcaption>
+        </figure>
+        <div class="count">Photo <b>1</b> of 3</div>
+      </div>
+    </div>
+
+    <div class="shot" data-shot>
+      <div class="stage">
+        <figure class="frame">
+          <img src="road-clean.jpg" width="1408" height="679" alt="The road leading onto Sitladihi Bridge between a dense palm grove and open paddy fields" loading="lazy">
+          <figcaption>The approach from the road, with a dense palm grove on the left and paddy fields on the right.</figcaption>
+        </figure>
+        <div class="count">Photo <b>2</b> of 3</div>
+      </div>
+    </div>
+
+    <div class="shot" data-shot style="--w: 760px">
+      <div class="stage">
+        <figure class="frame">
+          <img src="closeup2x.jpg" width="960" height="480" alt="Concrete posts along the edge of the bridge with green water and palms beyond" loading="lazy">
+          <figcaption>Concrete posts along the edge, with green water and palms on the far side.</figcaption>
+        </figure>
+        <div class="count">Photo <b>3</b> of 3</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="around">
+    <div class="in">
+      <p class="eyebrow">Around the bridge</p>
+      <h2>What you see here</h2>
+      <div class="items">
+        <div class="item">
+          <svg viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M4 28 H40"/><path d="M4 34 H40" opacity=".5"/><path d="M10 28 V19 M18 28 V19 M26 28 V19 M34 28 V19"/></svg>
+          <h3>Narrow concrete bridge</h3>
+          <p>A single-lane crossing with short concrete posts along both edges.</p>
+        </div>
+        <div class="item">
+          <svg viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 18 H40"/><path d="M6 26 Q12 21 18 26 T30 26 T40 26"/><path d="M6 34 Q12 29 18 34 T30 34 T40 34" opacity=".55"/><path d="M33 12 L38 18 L33 24" opacity=".0"/></svg>
+          <h3>Water across the bridge</h3>
+          <p>Water from the upper side runs across the bridge and spills down to the lower side.</p>
+        </div>
+        <div class="item">
+          <svg viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M22 40 V18"/><path d="M22 18 Q12 12 6 18 M22 18 Q32 12 38 18 M22 18 Q14 6 8 8 M22 18 Q30 6 36 8 M22 18 V6"/></svg>
+          <h3>Palm groves</h3>
+          <p>Dense fan palms on the left of the road and date palms standing on the right.</p>
+        </div>
+        <div class="item">
+          <svg viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M4 34 H40"/><path d="M8 34 V26 M14 34 V24 M20 34 V26 M26 34 V24 M32 34 V26 M38 34 V24" opacity=".7"/><path d="M4 18 H40" opacity=".35"/></svg>
+          <h3>Open paddy fields</h3>
+          <p>Green fields beyond the bridge, with a line of trees and village houses in the distance.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="in">
+    <p class="eyebrow">Location</p>
+    <div class="coord">
+      <code id="coords">23.2642922, 87.0666138</code>
+      <button class="btn" id="copy" type="button">Copy coordinates</button>
+    </div>
+    <small>Photos are from Google Maps imagery. The white road marker was removed from them. The animation on the first photo is added on top of the picture: the water flow, palm sway and sky drift are simulated.</small>
+  </div>
+</footer>
+
+<script id="vs" type="x-shader/x-vertex">
+attribute vec2 p;
+varying vec2 vUv;
+void main() { vUv = vec2(p.x * .5 + .5, .5 - p.y * .5); gl_Position = vec4(p, 0., 1.); }
+</script>
+<script id="fs" type="x-shader/x-fragment">
+#ifdef GL_FRAGMENT_PRECISION_HIGH
+precision highp float;
+#else
+precision mediump float;
+#endif
+varying vec2 vUv;
+uniform sampler2D uTex, uMask;
+uniform float uT, uFw;
+const float IA = 2.0736;
+
+float hash(vec2 p) { return fract(sin(dot(p, vec2(127.1, 311.7))) * 43758.5453123); }
+float noise(vec2 p) {
+  vec2 i = floor(p), f = fract(p); f = f * f * (3. - 2. * f);
+  return mix(mix(hash(i), hash(i + vec2(1., 0.)), f.x), mix(hash(i + vec2(0., 1.)), hash(i + vec2(1., 1.)), f.x), f.y);
+}
+float fbm(vec2 p) {
+  float a = .5, s = 0.;
+  for (int i = 0; i < 4; i++) { s += a * noise(p); p = p * 2.03 + 11.7; a *= .5; }
+  return s;
+}
+void main() {
+  vec2 uv = vec2((vUv.x - .5) * uFw + .5, vUv.y);
+  vec3 m = texture2D(uMask, uv).rgb;
+  float water = m.r, fol = m.g, sky = m.b;
+  vec2 d = vec2(0.);
+
+  // sky: slow drift and soft morphing of the clouds
+  d.x += sky * .0105 * sin(uT * .11);
+  d += sky * .0026 * (vec2(fbm(uv * 5. + vec2(uT * .03, 0.)), fbm(uv * 5. + vec2(9., uT * .025))) - .5);
+
+  // foliage: slow gusts plus fine leaf flutter, strongest at the crowns
+  float gust = sin(uT * 1.15 + uv.y * 8. + uv.x * 5.) * .6 + sin(uT * 2.1 + uv.x * 17. + uv.y * 3.) * .4;
+  gust *= .65 + .35 * sin(uT * .37 + uv.x * 2.);
+  d.x += fol * gust * .0052;
+  d.y += fol * sin(uT * 1.7 + uv.x * 13.) * .0012;
+  d += fol * (vec2(noise(uv * 70. + vec2(uT * 1.2, 0.)), noise(uv * 70. + vec2(3., uT * 1.1))) - .5) * .0026;
+
+  // water: advected noise, moving left and slightly toward the viewer
+  float dp = clamp((uv.y - .74) / .26, 0., 1.);
+  vec2 q = vec2(uv.x * IA, uv.y) * mix(70., 18., dp);
+  vec2 flow = vec2(uT * .9, -uT * .15);
+  float n1 = fbm(q + flow);
+  float n2 = fbm(q * 1.7 + flow * 1.6 + vec2(5.2, 1.3));
+  d += water * (vec2(n1, n2) - .5) * (.003 + .004 * dp);
+
+  // rings around the swimmer
+  vec2 dv = (uv - vec2(1027. / 1408., 568. / 679.)) * vec2(IA, 1.);
+  dv.y *= 3.2;
+  float rr = length(dv);
+  d += water * normalize(dv + 1e-5) * sin(rr * 140. - uT * 3.2) * exp(-rr * 7.) * .0016 * vec2(1., .6);
+
+  vec3 col = texture2D(uTex, uv + d).rgb;
+
+  // water light: stretched streaks along the flow, tiny glints, soft troughs
+  vec2 sq = vec2(uv.x * IA * mix(10., 5., dp) + uT * .8, uv.y * mix(120., 60., dp) - uT * .1);
+  float spec = smoothstep(.58, .82, fbm(sq));
+  vec3 skyc = vec3(.80, .89, 1.);
+  col *= 1. + water * (n1 - .5) * .2;
+  col += water * spec * skyc * .10 * (.4 + .6 * dp);
+  float gl = pow(fbm(vec2(uv.x * IA * 40. + uT * 1.3, uv.y * 90. - uT * .3)), 6.) * 4.;
+  col += water * gl * vec3(1., .95, .85) * .10;
+
+  // drifting cloud shadows over the ground
+  float cs = fbm(vec2(uv.x * IA * 1.1 - uT * .035, uv.y * 1.3 + 3.));
+  col *= mix(.93 + .14 * smoothstep(.38, .68, cs), 1., sky);
+
+  // warm light shafts from the upper right
+  vec2 rd = uv - vec2(.78, -.15); rd.x *= IA;
+  float ray = smoothstep(.45, 1., sin(atan(rd.y, rd.x) * 26. + uT * .06) * .5 + .5) * smoothstep(1.6, .1, length(rd));
+  col += vec3(1., .78, .5) * ray * .07 * (.65 + .35 * sin(uT * .35));
+
+  float v = smoothstep(1.1, .35, length((vUv - .5) * vec2(1., .9)));
+  col *= mix(.9, 1., v);
+  gl_FragColor = vec4(col, 1.);
+}
+</script>
+
+<script>
+(function () {
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* ---------- live photo ---------- */
+  function startHero() {
+    var media = document.getElementById('heroMedia'), cv = document.getElementById('gl');
+    var gl = cv.getContext('webgl', { antialias: false, alpha: false, powerPreference: 'low-power' });
+    if (!gl) return;
+    function sh(type, src) { var s = gl.createShader(type); gl.shaderSource(s, src); gl.compileShader(s); if (!gl.getShaderParameter(s, gl.COMPILE_STATUS)) throw new Error(gl.getShaderInfoLog(s)); return s; }
+    var pr = gl.createProgram();
+    gl.attachShader(pr, sh(gl.VERTEX_SHADER, document.getElementById('vs').textContent));
+    gl.attachShader(pr, sh(gl.FRAGMENT_SHADER, document.getElementById('fs').textContent));
+    gl.linkProgram(pr);
+    if (!gl.getProgramParameter(pr, gl.LINK_STATUS)) throw new Error('link');
+    gl.useProgram(pr);
+    var buf = gl.createBuffer();
+    gl.bindBuffer(gl.ARRAY_BUFFER, buf);
+    gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([-1, -1, 1, -1, -1, 1, 1, 1]), gl.STATIC_DRAW);
+    var loc = gl.getAttribLocation(pr, 'p');
+    gl.enableVertexAttribArray(loc);
+    gl.vertexAttribPointer(loc, 2, gl.FLOAT, false, 0, 0);
+    var uT = gl.getUniformLocation(pr, 'uT'), uFw = gl.getUniformLocation(pr, 'uFw');
+
+    function tex(img, unit, name) {
+      var t = gl.createTexture();
+      gl.activeTexture(gl.TEXTURE0 + unit);
+      gl.bindTexture(gl.TEXTURE_2D, t);
+      gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGB, gl.RGB, gl.UNSIGNED_BYTE, img);
+      gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR);
+      gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, gl.LINEAR);
+      gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, gl.CLAMP_TO_EDGE);
+      gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.CLAMP_TO_EDGE);
+      gl.uniform1i(gl.getUniformLocation(pr, name), unit);
+    }
+    function load(src) { return new Promise(function (ok, no) { var i = new Image(); i.onload = function () { ok(i); }; i.onerror = no; i.src = src; }); }
+
+    function size() {
+      var dpr = Math.min(window.devicePixelRatio || 1, 2);
+      var w = Math.min(1408, Math.round(media.clientWidth * dpr)), h = Math.round(w * media.clientHeight / media.clientWidth);
+      cv.width = w; cv.height = h;
+      gl.viewport(0, 0, w, h);
+      gl.uniform1f(uFw, Math.min(1, (media.clientWidth / media.clientHeight) / 2.0736));
+    }
+
+    Promise.all([load('road-clean.jpg'), load('mask.png')]).then(function (im) {
+      tex(im[0], 0, 'uTex'); tex(im[1], 1, 'uMask');
+      size();
+      window.addEventListener('resize', size);
+      var visible = true, t0 = performance.now(), first = true;
+      if ('IntersectionObserver' in window) new IntersectionObserver(function (e) { visible = e[0].isIntersecting; }, { threshold: 0 }).observe(media);
+      (function frame(now) {
+        if (visible && !document.hidden) {
+          gl.uniform1f(uT, (now - t0) / 1000 + 8.);
+          gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4);
+          if (first) { first = false; cv.classList.add('on'); }
+        }
+        requestAnimationFrame(frame);
+      })(performance.now());
+    }).catch(function () {});
+  }
+  if (!reduce) { try { startHero(); } catch (e) { /* static photo stays */ } }
+
+  /* ---------- distance counter ---------- */
+  var km = document.getElementById('km');
+  if (!reduce) {
+    var t0 = null;
+    (function tick(t) {
+      if (t0 === null) t0 = t;
+      var p = Math.min(1, (t - t0) / 1800), e = 1 - Math.pow(1 - p, 3);
+      km.textContent = (3.6 * e).toFixed(1);
+      if (p < 1) requestAnimationFrame(tick);
+    })(performance.now());
+  }
+
+  /* ---------- scroll-grow photos ---------- */
+  var shots = [].slice.call(document.querySelectorAll('[data-shot]')), pending = false;
+  function clamp(v) { return Math.max(0, Math.min(1, v)); }
+  function update() {
+    pending = false;
+    var vh = window.innerHeight;
+    shots.forEach(function (s) {
+      var r = s.getBoundingClientRect(), span = Math.max(1, r.height - vh);
+      var start = vh * .6, end = -span * .38;
+      var t = clamp((start - r.top) / (start - end));
+      var e = t < .5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
+      s.style.setProperty('--e', e.toFixed(3));
+      s.style.setProperty('--c', clamp((t - .72) / .26).toFixed(3));
+    });
+  }
+  function req() { if (!pending) { pending = true; requestAnimationFrame(update); } }
+  if (!reduce) {
+    window.addEventListener('scroll', req, { passive: true });
+    window.addEventListener('resize', req);
+    update();
+  }
+
+  /* ---------- copy coordinates ---------- */
+  var btn = document.getElementById('copy'), code = document.getElementById('coords');
+  btn.addEventListener('click', function () {
+    function done() { btn.textContent = 'Copied'; setTimeout(function () { btn.textContent = 'Copy coordinates'; }, 1800); }
+    function sel() { var rg = document.createRange(); rg.selectNodeContents(code); var s = window.getSelection(); s.removeAllRanges(); s.addRange(rg); btn.textContent = 'Selected'; }
+    try { navigator.clipboard.writeText(code.textContent).then(done, sel); } catch (e) { sel(); }
+  });
+})();
+</script>
+
+</body></html>
